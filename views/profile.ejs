@@ -1,0 +1,49 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+
+<div class="profile">
+    <div class="profileimg">
+    <img src="/images/<%=user.dp%>" alt="">
+</div>
+    <div class="profiler">
+
+   <div><h3>Name : </h3><h4><%=user.name%></h4></div> 
+    <div><h3>Class :</h3><h4><%=user.classs%></h4></div> 
+   <div> <h3>Mother's Name:</h3><h4><%=user.mother%></h4></div> 
+   <div> <h3>Father's Name:</h3><h4><%=user.father%></h4></div> 
+   <div> <h3>Age:</h3><h4>10 years</h4></div> 
+   <div> <h3>Contact:</h3><h4>1234567890</h4></div> 
+   <div> <h3>Email :</h3><h4><%=user.email%></h4></div> 
+   <div> <h3>Address:</h3><h4>mai kyu batau Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dignissimos.</h4></div> 
+   <div class="signout">
+    <a href="/editprofile">Edit profile</a>
+    <a href="/signout">Sign Out</a>
+   </div>
+   
+    </div>
+    
+</div>
+
+
+<h3 class="profiledocshead">
+    Documents
+</h3>
+<div class="profiledocs">
+
+<a href="/docs/<%=user.adhar%>" class="docscard">
+    <img src="/images/<%=user.adhar%>" alt="">
+<h4>Adhar Card</h4>
+</a>
+
+<a href="/docs/<%=user.bank%>" class="docscard">
+    <img src="/images/<%=user.bank%>" alt="">
+<h4>Bank Passbook</h4>
+</a>
+
+
+</div>
+
+
+
+<%- include('footer'); -%>

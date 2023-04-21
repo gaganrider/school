@@ -1,0 +1,52 @@
+
+
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+<div class="editmaindiv">
+
+<form class="edit" action="/edit" method="post" enctype="multipart/form-data">
+    <div class="editform1">
+<h2 class="edithead">Edit Profile</h2>
+<div class="editdiv">
+<div class="editl">
+
+<img src="/images/<%=user.dp%>" alt="">
+<input type="file" name="dp" id="c">
+</div>
+<div class="editr">
+<div class="inputdiv"><span class="material-symbols-outlined">person_filled</span><input type="text" placeholder="Name" value="<%=user.name%>" name="name" id="editname"></div>
+
+
+<div class="inputdiv"><span class="material-symbols-outlined">person_filled</span><input type="text" placeholder="Username" value="<%=user.username%>" name="username"></div>
+
+<div class="inputdiv"><span class="material-symbols-outlined">face</span><input type="text" placeholder="Mother's Name" value="<%=user.mother%>" name="mother"></div>
+
+<div class="inputdiv"><span class="material-symbols-outlined">account_circle</span><input type="text" placeholder="Father's Name" value="<%=user.father%>" name="father"></div>
+<div class="inputdiv"><span class="material-symbols-outlined">mail</span><input type="email" placeholder="Email" value="<%=user.email%>" name="email"></div>
+<div class="inputdiv"><span class="material-symbols-outlined">book</span><input type="number" placeholder="Class" value="<%=user.classs%>" name="classs"></div>
+
+<br>
+<a id="reset" href="/reset">Reset Password</a>
+</div>
+</div>
+</div>
+
+<div class="editform1">
+<h2 class="edithead">Upload docs</h2>
+<div class="newdocs">
+<h5>Upload Adhar</h5>
+<input type="file" name="adhar" id="a">
+<h5>Upload Bank</h5>
+<input type="file" name="bank" id="b">
+</div>
+</div>
+
+<div><button>Save profile</button> <a href="/delete">Delete Profile</a></div><br><br><br><br><br><br>
+<hr>
+</form>
+
+
+
+</div>
+
+<%- include('footer'); -%>

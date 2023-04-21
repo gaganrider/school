@@ -1,0 +1,28 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<div class="reset">
+<form action="/reset" method="post" class="resetdiv">
+    <img src="/images/<%= user.dp %>" alt="">
+    <h3><%= user.name %></h3>
+    <div>
+    <h4>Old password</h4>
+    <div class="inputdiv"><span class="material-symbols-outlined">lock</span><input type="password" placeholder="XXXXX" name="oldpass"></div>
+    <h4>New password</h4>
+    <div class="inputdiv"><span class="material-symbols-outlined">lock</span><input id="newpass" type="password" placeholder="XXXXX" name="newpass"></div>
+    <div class="strength">
+        <div class="strengthout">
+            <div class="strengthin"></div>
+        </div>
+        <h5 class="strengthtext"></h5>
+    </div>
+    </div>
+    
+<button type="submit">Reset Password</button>
+</form>
+
+</div>
+
+
+
+<%- include('footer'); -%>

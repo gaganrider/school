@@ -1,0 +1,64 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<form action="/teacher/<%=user.username%>" method="post" class="teacher">
+<h4><%=user.username%></h4>
+<div class="profile">
+    <div class="profileimg">
+    <img src="/images/<%=user.dp%>" alt="">
+</div>
+    <div class="profiler">
+
+   <div><h3>Name : </h3><h4><%=user.name%></h4></div> 
+    <div><h3>Class :</h3><h4><%=user.classs%></h4></div> 
+   <div> <h3>Mother's Name:</h3><h4><%=user.mother%></h4></div> 
+   <div> <h3>Father's Name:</h3><h4><%=user.father%></h4></div> 
+   <div> <h3>Age:</h3><h4>10 years</h4></div> 
+   <div> <h3>Contact:</h3><h4>1234567890</h4></div> 
+   <div> <h3>Email :</h3><h4><%=user.email%></h4></div> 
+   <div> <h3>Address:</h3><h4>mai kyu batau Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dignissimos.</h4></div> 
+   
+    </div>
+    
+</div>
+
+
+<h3 class="profiledocshead">
+    Documents
+</h3>
+<div class="profiledocs">
+
+<a href="/docs/<%=user.adhar%>" class="docscard">
+    <img src="/images/<%=user.adhar%>" alt="">
+<h4>Adhar Card</h4>
+</a>
+
+<a href="/docs/<%=user.bank%>" class="docscard">
+    <img src="/images/<%=user.bank%>" alt="">
+<h4>Bank Passbook</h4>
+</a>
+
+
+</div>
+<div class="teacherdiv">
+<div class="resultdiv">
+   
+    <div class="result"><div class="sub">Hindi</div><div class="marks"><%= user.hindi %></div><input type="number" placeholder="0" name="hindi"></div> 
+    <div class="result"><div class="sub">English</div><div class="marks"><%= user.english %></div><input type="number" placeholder="0" name="english"></div> 
+    <div class="result"><div class="sub">Maths</div><div class="marks"><%= user.maths %></div><input type="number" placeholder="0" name="maths"></div> 
+    <div class="result"><div class="sub">Sanskrit</div><div class="marks"><%= user.sanskrit %></div><input type="number" placeholder="0" name="sanskrit"></div> 
+    <div class="result"><div class="sub">Science</div><div class="marks"><%= user.science %></div><input type="number" placeholder="0" name="science"></div> 
+    <div class="result"><div class="sub">Social Studies</div><div class="marks"><%= user.sostd %></div><input type="number" placeholder="0" name="sostd"></div> 
+    <div class="result" id="totalm"><div class="sub">Total</div><div class="marks"><%= user.sostd +user.science +user.maths +user.sanskrit +user.english +user.hindi %></div></div> 
+    
+ </div>
+
+<h4>Send Response</h4>
+
+ <textarea name="parent" id="sendmail" cols="30" rows="10"></textarea>
+
+ <button>Submit</button>
+</div>
+</form>
+<br><br><br>
+<%- include('footer'); -%>

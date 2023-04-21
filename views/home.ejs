@@ -1,0 +1,22 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+
+
+<div class="homeprofile">
+    <div class="homeprofilel">
+<div>
+    
+      <h3><%= user.name %></h3>
+    <!-- <h3></h3> -->
+<h4>Class:<%=user.classs%></h4></div>
+<a href="/profile">View Profile</a>
+    </div>
+    <img src="/images/<%=user.dp%>" alt="">
+</div>
+
+<iframe id="calender" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&showPrint=0&showTitle=0&src=ZGFuZ2Vyc2dhZ2FuQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MTA3NDAzNDkyNjk0NjAxODM1MDlAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%237986CB&color=%230B8043" style="font-family:'Nunito'"  scrolling="no"></iframe>
+
+
+
+<%- include('footer'); -%>
